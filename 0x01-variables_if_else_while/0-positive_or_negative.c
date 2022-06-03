@@ -3,15 +3,13 @@
 #include <stdio.h>
 
 /**
- * main - prints a randomnumber and specifies if it is 
- * 	 positive,negative or zero
+ * main - prints a randomnumber and specifies if it is positive,negative or zero
  *
  *
  * Return: always 0
 */
 
 int main(void){
-	
 	int n;
 
 	srand(time(0));
@@ -20,7 +18,7 @@ int main(void){
 	if(n > 0){
 		printf("%d is  positive\n",n);
 	}else if(n < 0){
-		printf("%d is negatuve\n", n);
+		printf("%d is negative\n", n);
 	}else{
 		printf("%d is zero\n", n);
 	}
