@@ -8,29 +8,25 @@
 
 int main(void)
 {
-	int dig1;
-	int dig2;
+	int digit1, digit2;
 
-	for (dig1 = 0 ; dig1 < 10 ; dig1++)
+	for (digit1 = 0; digit1 < 10; digit1++)
 	{
-		for (dig2 = 1 ; dig2 < 10 ; dig2++)
+		for (digit2 = 0; digit2 < 10; digit2++)
 		{
-			putchar((dig1 % 10) + '0');
-			putchar((dig2 % 10) + '0');
-
-			if ((dig1 != 9) && ((dig1 != 1) && (dig2 != 0)))
-			{
-				if (dig1 != dig2)
-			
-				continue;
-			}
-			
-			putchar(',');
-			putchar(' ');
-		}
+			putchar((digit1 % 10) + '0');
+																				putchar((digit2 % 10) + '0');
+	
+																				if (digit1 == 9 && digit2 == 9)
+																				continue;
+																							
+																				putchar(',');
+																				putchar(' ');
+																			}
 	}
 
 	putchar('\n');
-	 return (0);
+
+	return (0);
 }
 
