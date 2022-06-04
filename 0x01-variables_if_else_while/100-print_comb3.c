@@ -22,10 +22,10 @@ int main(void)
 			{
 				continue;
 			}
-			else if ((dig1 != dig2) || ((dig1 != 1) && (dig2 != 0))
-					{
-					continue;
-					}
+			else if ((dig1 != dig2) || ((dig1 != 1) && (dig2 != 0)))
+			{
+				continue;
+			}
 
 			putchar(',');
 			putchar(' ');
