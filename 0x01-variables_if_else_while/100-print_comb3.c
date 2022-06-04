@@ -23,6 +23,7 @@ int main(void)
 				if (dig1 != dig2)
 			
 				continue;
+			}
 			
 			putchar(',');
 			putchar(' ');
