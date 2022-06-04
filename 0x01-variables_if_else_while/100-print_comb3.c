@@ -13,20 +13,15 @@ int main(void)
 
 	for (dig1 = 0 ; dig1 < 10 ; dig1++)
 	{
-		for (dig2 = 0 ; dig2 < 10 ; dig2++)
+		for (dig2 = 1 ; dig2 < 10 ; dig2++)
 		{
 			putchar((dig1 % 10) + '0');
 			putchar((dig2 % 10) + '0');
 
-			if ((dig1 == 8) && (dig2 == 9))
-			{
+			if (((dig1 == 8) && (dig2 == 9)) || (dig1 != dig2) || ((dig1 != 1) && (dig2 != 0)))
+			
 				continue;
-			}
-			else if ((dig1 != dig2) || ((dig1 != 1) && (dig2 != 0)))
-			{
-				continue;
-			}
-
+			
 			putchar(',');
 			putchar(' ');
 		}
