@@ -1,33 +1,40 @@
 #include <stdio.h>
 
 /**
- * *main - print 2 digit numbers.
- *  *
- *   *Return: Always 0.
-*/
+ * main- Entry point.
+ *
+ * Return:Always 0.
+ */
 
 int main(void)
 {
-	int digit1, digit2;
+	int a = '0';
+	int b = '0';
 
-	for (digit1 = 0; digit1 < 8; digit1++)
+	while (a <= '8')
 	{
-		for (digit2 = 1; digit2 < 10; digit2++)
+		while (b <= '9')
 		{
-																				if ((digit1 <= 8 && digit2 <= 9) || (digit1 != digit2) || (digit1 != 1 && digit2 != 0))
+			if (a < b)
 			{
-				putchar((digit1 % 10) + '0');
-				putchar((digit2 % 10) + '0');
+				putchar((a % 10) + '0');
+				putchar((b % 10) + '0');
 
-				break;
-			}														
-																				putchar(',');
-																				putchar(' ');
-																			}
+				if (!(a == '8' && b == '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+
+			b++;
+		}
+
+		b = '8';
+		a++;
 	}
 
 	putchar('\n');
 
 	return (0);
 }
-
