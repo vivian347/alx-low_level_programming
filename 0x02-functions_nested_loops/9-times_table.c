@@ -6,23 +6,26 @@
 
 void times_table(void)
 {
-	int n, result;
+	int n, result, mult;
 
 	for (n = 0 ; n <= 9 ; n++)
 	{
 		_putchar('0');
 
-		result  = n * 9;
-
-		if (n < 10)
+		for (mult = 1 ; mult < 10 ; mult++)
 		{
 			_putchar(',');
 			_putchar(' ');
-		}
-		else
-		{
-			_putchar((result / 10) + '0');
-			_putchar((result % 10) + '0');
+			result = n * mult;
+			if (result < 10)
+			{
+				_putchar(' ');
+			}
+			else
+			{
+				_putchar((result / 10) + '0');
+				_putchar((result % 10) + '0');
+			}
 		}
 
 		_putchar('\n');
