@@ -18,6 +18,6 @@ void rev_string(char *s)
 		*r = *s;
 		*s++ = temp;
 	}
-	_putchar(r);
+	_putchar(*r);
 	_putchar('\n');
 }
