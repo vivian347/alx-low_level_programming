@@ -2,22 +2,23 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - sumof the 2 diagonals in a matrix
+ * print_diagsums - sumofthe 2 diag
  * @a: matrix
- * @size: size of the matrix
+ * @size: dimensions of matrix
  */
 
 void print_diagsums(int *a, int size)
 {
-	int i;
-	int d1 = 0, d2 = 0;
+	int d1 = 0, d2 = 0, index;
 
-	for (i = 0 ; i < size ; i++)
-		d1 += a[i];
-	a -= size;
-	for (i = 0 ; i < size ; i++)
+	for (index = 0 ; index < size ; index++)
 	{
-		d2 += a[i];
+		d1 += a[index];
+	}
+	a -= size;
+	for (index = 0 ; index < size ; index++)
+	{
+		d2 += a[index];
 		a -= size;
 	}
 	printf("%d, %d\n", d1, d2);
