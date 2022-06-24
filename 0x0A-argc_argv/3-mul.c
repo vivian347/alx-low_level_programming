@@ -6,9 +6,11 @@
  * main - multiplies 2 numbers
  * @argc: count of arguments
  * @argv: an array of pointers tothe arguments
+ *
+ * Return: 0
  */
 
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
 	int n1, n2, prod;
 
