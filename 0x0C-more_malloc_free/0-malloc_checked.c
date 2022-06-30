@@ -2,18 +2,18 @@
 #include <stdlib.h>
 
 /**
- * *malloc_checked - allocates emory using malloc
- * @b: integer to be assigned mem
+ * *malloc_checked -allocate memusing malloc
+ * @b: integer
  *
  * Return: pointer to allocated memory
  */
 
 void *malloc_checked(unsigned int b)
 {
-	int *a;
+	int *x;
 
-	a = malloc(b);
-	if (a == NULL)
+	x = malloc(b);
+	if (x == NULL)
 		exit(98);
-	return (a);
+	return (x);
 }
