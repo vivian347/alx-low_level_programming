@@ -24,12 +24,12 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	for (len = 0; str[len];  len++)
+	for (len = 0; str[len];)
 		len++;
 	new_node->str = dup;
 	new_node->len = len;
-	new_node->next = *head;
-	*head = new_node;
+	new_node->next = (*head);
+	(*head) = new_node;
 
 	return (new_node);
 }
