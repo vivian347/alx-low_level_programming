@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free-list - frees list
+ * free_list - frees list
  * @head: start of list
  */
 
@@ -9,7 +9,7 @@ void free_list(list_t *head)
 {
 	list_t *temp;
 
-	while (head != NULL)
+	while (head)
 	{
 		temp = head->next;
 		free(head->str);
