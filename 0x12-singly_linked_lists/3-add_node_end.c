@@ -2,42 +2,41 @@
 #include <string.h>
 
 /**
- * add_node_end - adds new node at end of linked list
- * @head: node at the beginning of list
- * @str: string to be added at new node
+ * add_node_end - adds new node at end of list
+ * @head: pointer to start of linked list
+ * @str: string tobe added tolist
  *
- * Return: end-node
+ * Return: address of new el
  */
 
-list_t *add_node_end(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const  char *str)
 {
 	char *dup;
 	int len;
-	list_t *end_node = malloc(sizeof(list_t));
+	list_t *new = malloc(sizeof(list_t));
 	list_t *last = *head;
 
-	if (end_node == NULL)
+	if (new == NULL)
 		return (NULL);
 	dup = strdup(str);
 	if (dup == NULL)
 	{
-		free(end_node);
+		free(new);
 		return (NULL);
 	}
 	for (len = 0; str[len];)
 		len++;
-	end_node->str = dup;
-	end_node->len = len;
-	end_node->next = NULL;
-	if (*head == NULL)
-	{
-		*head = end_node;
-		return (0);
-	}
-	while (last->next != NULL)
-		last = last->next;
-	last->next = end_node;
-	return (0);
+	new->str = dup;
+	new->len = len;
+	new->next = NULL;
 
-	return (end_node);
+	if (*head == NULL)
+		*head = new;
+	else
+	{
+		while (last->next != NULL)
+			last = last->next;
+		last->next = new;
+	}
+	return (*head);
 }
