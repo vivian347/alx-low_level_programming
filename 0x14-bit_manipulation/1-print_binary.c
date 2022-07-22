@@ -7,8 +7,7 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int i;
-
-	for (i = 1 << 15; i > 0; i >>= 1)
-		printf("%u", !!(n & i));
+	if (n > 1)
+		print_binary(n >> 1);
+	_putchar((n & 1) + '0');
 }
